@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO. 2</title>
+    <style>
+        body {
+            background-color: #FFF5E4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #2E073F;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        nav {
+            background-color: #CD5C08;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-left: 550px; /* Tambahkan jarak antara logo dan daftar */
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+        }
+
+        nav ul li a, nav ul li select {
+            text-decoration: none;
+            color: #2E073F;
+            font-weight: bold;
+            background-color: #FFF5E4;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover, nav ul li select:hover {
+            background-color: #FFD700;
+        }
+
+        .shop {
+            background-color: #4a1919;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .shop-header h2 {
+            margin: 0;
+            color: orange;
+        }
+
+        .shop-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 50px;
+        }
+
+        .card {
+            width: 240px;
+            margin: 20px;
+            background-color: #9f532a;
+            border: 3px solid #3B3B3B;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .card-image img:hover {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            padding: 20px;
+            color: white;
+        }
+
+        .card-body h3 {
+            margin: 10px 0;
+        }
+
+        .card-body i {
+            color: yellow;
+            font-size: 14px;
+        }
+
+        .cash {
+            display: block;
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .card-body p {
+            margin: 5px 0;
+        }
+
+        .card-body button {
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card-body button:hover {
+            background-color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <img src="img/2024-08-19.png" alt="Logo" width="15%">
+            <ul>
+                <li><a href="pesanan.html">📖 PESANAN</a></li>
+                <li><a href="#">👤 LOGIN</a></li>
+                <li>
+                    <select>
+                        <option value="bali">Bali</option>
+                        <option value="lombok">Lombok</option>
+                        <option value="yogyakarta">Yogyakarta</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shop" id="shop">
+        <div class="shop-header">
+            <h2>Shop</h2>
+            <h2>UGODA TRAVEL</h2>
+        </div>
+        <div class="shop-box">
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/banda2.jpeg" alt="BANDA NEIRA">
+                </div>
+                <div class="card-body">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                    <label class="cash">Rp74.400</label>
+                    <h3>BANDA NEIRA</h3>
+                    <p>Banda Tangah atau Banda Naira adalah salah satu pulau di Kepulauan Banda, dan merupakan pusat administratif Kecamatan Banda, Kabupaten Maluku Tengah</p>
+                    <p>👤 20.456 viewers</p>
+                    <p>💬 5.690 comments</p>
+                    <button type="submit">Read more</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/KOMODOBERPELUKAN.jpg" alt="Pulau Komodo">
+                </div>
+                <div class="card-body">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <label class="cash">Rp67.500</label>
+                    <h3>Pulau Komodo</h3>
+                    <p>Pulau Komodo adalah sebuah pulau yang terletak di Kepulauan Nusa Tenggara, berada di sebelah timur Pulau Sumbawa, yang dipisahkan oleh Selat Sape.</p>
+                    <p>👤 19.657viewers</p>
+                    <p>💬 6.980 comments</p>
+                    <button type="submit">Read more</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/raja ampat.jpeg" alt="Raja Ampat">
+                </div>
+                <div class="card-body">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                    <label class="cash">Rp63.200</label>
+                    <h3>Raja Ampat</h3>
+                    <p>Kabupaten Raja Ampat adalah salah satu kabupaten di provinsi Papua Barat Daya, Indonesia. Ibukota kabupaten ini terletak di Waisai.</p>
+                    <p>👤 29.879 viewers</p>
+                    <p>💬 13.400 comments</p>
+                    <button type="submit">Read more</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

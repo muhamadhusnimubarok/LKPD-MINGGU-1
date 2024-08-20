@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO. 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px; /* Jarak antara dua area gambar */
+        }
+
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-section img {
+            max-width: 300px;
+            max-height: 300px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian kiri dengan gambar asli dan kontrol -->
+        <div class="image-section">
+            <h1>Pilih Gambar dan Opacity</h1>
+
+            <div id="imageContainerLeft">
+                <img id="imageLeft" src="img/BMW Z4.jpg" alt="Gambar">
+            </div>
+
+            <div id="controls">
+                <label for="imageSelector">Pilih Gambar:</label>
+                <select id="imageSelector">
+                    <option value="img/BMW Z4.jpg">Gambar 1</option>
+                    <option value="img/BMWI9.jpg">Gambar 2</option>
+                    <option value="img/VOLVO.jpg">Gambar 3</option>
+                </select>
+
+                <label for="opacitySelector">Pilih Opacity:</label>
+                <select id="opacitySelector">
+                    <option value="1">1.0</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.2">0.2</option>
+                </select>
+
+                <button id="submitBtn">Submit</button>
+            </div>
+        </div>
+
+        <!-- Bagian kanan dengan gambar hasil -->
+        <div class="image-section">
+            <h1>Hasil</h1>
+            <div id="imageContainerRight">
+                <img id="displayedImage" src="img/BMW Z4.jpg" alt="Gambar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const imageSelector = document.getElementById('imageSelector');
+        const opacitySelector = document.getElementById('opacitySelector');
+        const displayedImage = document.getElementById('displayedImage');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Event listener untuk mengganti gambar dan opacity saat tombol Submit ditekan
+        submitBtn.addEventListener('click', function() {
+            const selectedImage = imageSelector.value;
+            const selectedOpacity = opacitySelector.value;
+            displayedImage.src = selectedImage;
+            displayedImage.style.opacity = selectedOpacity;
+        });
+    </script>
+
+</body>
+</html>

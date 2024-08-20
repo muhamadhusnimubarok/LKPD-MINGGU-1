@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>No.</th>
+        <th>Keterangan</th>
+        <th>Bersedia Membayar</th>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td>
+            Bersedia membayar Dana Sumbangan Pembagunan (DSP) sebesar Rp.8.500.000 dengan mekanisme pembayaran Dana Sumbangan Pendidikan
+        </td>
+        <td>
+            <input type="radio" id="lunas" name="pembayaran_dsp" value="lunas">
+            <label for="lunas">LUNAS SAAT DAFTAR ULANG</label><br>
+            <input type="radio" id="cicilan" name="pembayaran_dsp" value="cicilan">
+            <label for="cicilan">60% dibayarkan saat daftar ulang dan sisanya dibayarkan paling lambat tanggal 13 Juli 2024</label>
+        </td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>
+            Bersedia membayar Sumbangan Penyelenggaraan Pendidikan (SPP) secara rutin setiap bulan sebesar Rp.550.000 yang dibayarkan sebelum tanggal 10 setiap bulannya kecuali bulan Juli 2024
+        </td>
+        <td>
+            <input type="checkbox">
+        </td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>
+            <b>Pembayaran Lainnya</b>
+            <br>
+            Setelah Putra/Putri kami diterima di SMK Wikrama Bogor, kami juga bersedia memberikan:
+            <br><br>
+            a. Wakaf pembangunan Masjid Al-Ikram
+        </td>
+        <td>
+            <input type="radio" id="wakaf_300" name="wakaf" value="300000">
+            <label for="wakaf_300">Rp.300.000</label><hr>
+            <input type="radio" id="wakaf_500" name="wakaf" value="500000">
+            <label for="wakaf_500">Rp.500.000</label><hr>
+            <input type="radio" id="wakaf_1000" name="wakaf" value="1000000">
+            <label for="wakaf_1000">Rp.1.000.000</label><hr>
+            <input type="radio" id="wakaf_2000" name="wakaf" value="2000000">
+            <label for="wakaf_2000">Rp.2.000.000</label><hr>
+            <input type="radio" id="wakaf_other" name="wakaf" value="other">
+            <label for="wakaf_other">&gt; Rp.5.000.000 atau Rp. <input type="number"></label>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>b. Zakat, Infaq, dan Sodaqoh secara rutin setiap bulan</td>
+        <td>
+            <input type="number" placeholder="Rp.20.000">
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

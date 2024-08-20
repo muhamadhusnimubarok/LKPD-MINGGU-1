@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No. 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: darkgreen;
+        }
+
+        .alert-box {
+            display: none;
+            padding: 20px;
+            background-color: red;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="button" onclick="showAlert()">Munculkan Alert</button>
+
+<div id="alertBox" class="alert-box"></div>
+
+<script>
+function showAlert() {
+    const alertBox = document.getElementById('alertBox');
+    let countdown = 5;
+
+    alertBox.style.display = 'block';
+
+    const interval = setInterval(function() {
+        alertBox.textContent = `Danger! Alert akan tertutup dalam ${countdown}`;
+        countdown--;
+
+        if (countdown < 0) {
+            clearInterval(interval);
+            alertBox.style.display = 'none';
+        }
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
